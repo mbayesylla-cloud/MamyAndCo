@@ -69,7 +69,7 @@ export default function Home() {
           {/* Right */}
           <div className="hero-image-wrap animate-right">
             <img
-              src="public\images\Photos.jpg"
+              src="\images\Photos.jpg"
               alt="Collection Mamy & Co"
             />
             <div className="hero-badge-float top-left">
