@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BOUTIQUE_PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
 
-const CATEGORIES = ['Tous', 'Parfums', 'Huiles'];
+const CATEGORIES = ['Tous', 'Parfums', 'Huiles et déodorants', 'Gammes'];
 
 export default function Boutique() {
   const [activeFilter, setActiveFilter] = useState('Tous');
@@ -63,7 +63,7 @@ export default function Boutique() {
                   className={`filter-btn ${activeFilter === c ? 'active' : ''}`}
                   onClick={() => setActiveFilter(c)}
                 >
-                  {c === 'Tous' ? '✨ Tous' : c === 'Parfums' ? '🧴 Parfums' : '💧 Huiles et déodorants'}
+                  {c === 'Tous' ? '✨ Tous' : c === 'Parfums' ? '🧴 Parfums' : c === 'Huiles et déodorants' ? '💧 Huiles et déodorants' : '📦 Gammes'}
                 </button>
               ))}
             </div>
