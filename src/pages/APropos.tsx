@@ -26,7 +26,7 @@ const VALUES = [
   {
     icon: '🤝',
     title: 'Confiance',
-    desc: 'Plus de 2000 clients nous font confiance. Satisfaction garantie et retours simplifiés pour votre tranquillité.',
+    desc: 'Plus de 20 clients nous font confiance. Satisfaction garantie et retours simplifiés pour votre tranquillité.',
   },
   {
     icon: '🌍',
@@ -85,7 +85,7 @@ export default function APropos() {
                 marginBottom: '20px',
               }}
             >
-              Fondée avec passion en 2019, <strong>Mamy & Co</strong> est née
+              Fondée avec passion en 2025, <strong>Mamy & Co</strong> est née
               d'un rêve simple : rendre accessible la parfumerie de luxe
               authentique aux habitants de Dakar. Ce qui a commencé comme une
               petite boutique de quartier est devenu la référence des amateurs
@@ -159,9 +159,9 @@ export default function APropos() {
           }}
         >
           {[
-            { val: '2 000+', label: 'Clients satisfaits', icon: '👤' },
-            { val: '5+', label: "Années d'expérience", icon: '⭐' },
-            { val: '50+', label: 'Parfums disponibles', icon: '🧴' },
+            { val: '20+', label: 'Clients satisfaits', icon: '👤' },
+            { val: '1+', label: "Années d'expérience", icon: '⭐' },
+            { val: '10+', label: 'Parfums disponibles', icon: '🧴' },
             { val: '100%', label: 'Qualité garantie', icon: '✅' },
             { val: '24h/7j', label: 'Support WhatsApp', icon: '💬' },
           ].map((s) => (

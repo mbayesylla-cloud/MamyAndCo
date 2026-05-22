@@ -18,11 +18,9 @@ export default function Navbar() {
 
   const socials = [
     { href: WHATSAPP, icon: 'fa-brands fa-whatsapp', cls: 'social-wa', label: 'WhatsApp' },
-    { href: 'https://instagram.com/mamyandco', icon: 'fa-brands fa-instagram', cls: 'social-ig', label: 'Instagram' },
-    { href: 'https://snapchat.com/add/mamyandco', icon: 'fa-brands fa-snapchat', cls: 'social-sc', label: 'Snapchat' },
-    { href: 'https://facebook.com/mamyandco', icon: 'fa-brands fa-facebook-f', cls: 'social-fb', label: 'Facebook' },
-    { href: 'https://tiktok.com/@mamyandco', icon: 'fa-brands fa-tiktok', cls: 'social-tk', label: 'TikTok' },
-    { href: 'https://x.com/mamyandco', icon: 'fa-brands fa-x-twitter', cls: 'social-x', label: 'X' },
+    { href: 'https://www.instagram.com/mamy_andco?igsh=NGx0dWRodzA4Nng5&utm_source=qr', icon: 'fa-brands fa-instagram', cls: 'social-ig', label: 'Instagram' },
+    { href: 'https://snapchat.com/t/4PaBTPwu', icon: 'fa-brands fa-snapchat', cls: 'social-sc', label: 'Snapchat' },
+    { href: 'https://www.tiktok.com/@mamy_andco?_r=1&_t=ZS-96aIIa0LVsg', icon: 'fa-brands fa-tiktok', cls: 'social-tk', label: 'TikTok' },
   ];
 
   return (

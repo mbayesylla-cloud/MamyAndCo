@@ -62,11 +62,9 @@ export default function Contact() {
 
   const SOCIALS = [
     { name: 'WhatsApp', handle: '+221 77 824 67 10', icon: 'fa-brands fa-whatsapp', color: '#25D366', href: `https://wa.me/${WHATSAPP_NUM}` },
-    { name: 'Instagram', handle: '@mamyandco', icon: 'fa-brands fa-instagram', color: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)', href: 'https://instagram.com/mamyandco' },
-    { name: 'Snapchat', handle: 'mamyandco', icon: 'fa-brands fa-snapchat', color: '#FFFC00', href: 'https://snapchat.com/add/mamyandco', dark: true },
-    { name: 'Facebook', handle: 'Mamy & Co', icon: 'fa-brands fa-facebook-f', color: '#1877F2', href: 'https://facebook.com/mamyandco' },
-    { name: 'TikTok', handle: '@mamyandco', icon: 'fa-brands fa-tiktok', color: '#1A1A1A', href: 'https://tiktok.com/@mamyandco' },
-    { name: 'X (Twitter)', handle: '@mamyandco', icon: 'fa-brands fa-x-twitter', color: '#000', href: 'https://x.com/mamyandco' },
+    { name: 'Instagram', handle: '@mamyandco', icon: 'fa-brands fa-instagram', color: 'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)', href: 'https://www.instagram.com/mamy_andco?igsh=NGx0dWRodzA4Nng5&utm_source=qr' },
+    { name: 'Snapchat', handle: 'mamyandco', icon: 'fa-brands fa-snapchat', color: '#FFFC00', href: 'https://snapchat.com/t/4PaBTPwu', dark: true },
+    { name: 'TikTok', handle: '@mamyandco', icon: 'fa-brands fa-tiktok', color: '#1A1A1A', href: 'https://www.tiktok.com/@mamy_andco?_r=1&_t=ZS-96aIIa0LVsg' },
   ];
 
   return (
