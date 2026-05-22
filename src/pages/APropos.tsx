@@ -133,7 +133,7 @@ export default function APropos() {
 
           <div className="animate-right">
             <img
-              src="public\images\Lot 2.jpg"
+              src="images\Lot 2.jpg"
               alt="Boutique Mamy & Co"
               className="about-img"
             />
