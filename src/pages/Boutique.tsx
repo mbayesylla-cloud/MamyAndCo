@@ -11,7 +11,7 @@ type Category = {
 
 const CATEGORIES: Category[] = [
   { key: 'Tous',        label: 'Tous',           emoji: '✨', matches: [] },
-  { key: 'Parfums',     label: 'Parfums',         emoji: '🧴', matches: ['Parfums'] },
+  { key: 'Parfums',     label: 'Extraits 30ml',   emoji: '🧴', matches: ['Parfums'] },
   { key: 'Huiles',      label: 'Huiles 10ml',     emoji: '💧', matches: ['Huiles'] },
   { key: 'Huiles 3ml',  label: 'Huiles 3ml',      emoji: '🫙', matches: ['Huiles 3ml'] },
   { key: 'Déodorants',  label: 'Déodorants',      emoji: '🌿', matches: ['Déodorants'] },
