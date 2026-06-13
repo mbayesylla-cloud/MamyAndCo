@@ -2,16 +2,36 @@ import { useState } from 'react';
 import { BOUTIQUE_PRODUCTS } from '../data/products';
 import ProductCard from '../components/ProductCard';
 
-const CATEGORIES = ['Tous', 'Parfums', 'Huiles et déodorants', 'Gammes'];
+type Category = {
+  key: string;
+  label: string;
+  emoji: string;
+  matches: string[];
+};
+
+const CATEGORIES: Category[] = [
+  { key: 'Tous',        label: 'Tous',           emoji: '✨', matches: [] },
+  { key: 'Parfums',     label: 'Parfums',         emoji: '🧴', matches: ['Parfums'] },
+  { key: 'Huiles',      label: 'Huiles 10ml',     emoji: '💧', matches: ['Huiles'] },
+  { key: 'Huiles 3ml',  label: 'Huiles 3ml',      emoji: '🫙', matches: ['Huiles 3ml'] },
+  { key: 'Déodorants',  label: 'Déodorants',      emoji: '🌿', matches: ['Déodorants'] },
+  { key: 'Brumes',      label: 'Brumes 100ml',    emoji: '🌫️', matches: ['Brumes'] },
+  { key: 'Gammes',      label: 'Gammes',          emoji: '📦', matches: ['Gammes'] },
+];
 
 export default function Boutique() {
-  const [activeFilter, setActiveFilter] = useState('Tous');
+  const [activeKey, setActiveKey] = useState('Tous');
   const [search, setSearch] = useState('');
 
+  const activeCat = CATEGORIES.find(c => c.key === activeKey)!;
+
   const filtered = BOUTIQUE_PRODUCTS.filter(p => {
-    const matchCat = activeFilter === 'Tous' || p.category === activeFilter;
-    const matchSearch = p.name.toLowerCase().includes(search.toLowerCase()) ||
-                        p.description.toLowerCase().includes(search.toLowerCase());
+    const matchCat =
+      activeKey === 'Tous' ||
+      activeCat.matches.includes(p.category);
+    const matchSearch =
+      p.name.toLowerCase().includes(search.toLowerCase()) ||
+      p.description.toLowerCase().includes(search.toLowerCase());
     return matchCat && matchSearch;
   });
 
@@ -33,6 +53,7 @@ export default function Boutique() {
         <div className="container">
           {/* Search + Filters */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', marginBottom: '40px' }}>
+
             {/* Search */}
             <div style={{ position: 'relative', width: '100%', maxWidth: '480px' }}>
               <i className="fa-solid fa-magnifying-glass" style={{
@@ -59,11 +80,11 @@ export default function Boutique() {
             <div className="boutique-filters">
               {CATEGORIES.map(c => (
                 <button
-                  key={c}
-                  className={`filter-btn ${activeFilter === c ? 'active' : ''}`}
-                  onClick={() => setActiveFilter(c)}
+                  key={c.key}
+                  className={`filter-btn ${activeKey === c.key ? 'active' : ''}`}
+                  onClick={() => setActiveKey(c.key)}
                 >
-                  {c === 'Tous' ? '✨ Tous' : c === 'Parfums' ? '🧴 Parfums' : c === 'Huiles et déodorants' ? '💧 Huiles et déodorants' : '📦 Gammes'}
+                  {c.emoji} {c.label}
                 </button>
               ))}
             </div>
@@ -71,7 +92,8 @@ export default function Boutique() {
 
           {/* Count */}
           <div style={{ marginBottom: '24px', color: 'var(--color-text-secondary)', fontSize: '14px' }}>
-            <strong style={{ color: 'var(--color-secondary-dark)' }}>{filtered.length}</strong> produit{filtered.length > 1 ? 's' : ''} trouvé{filtered.length > 1 ? 's' : ''}
+            <strong style={{ color: 'var(--color-secondary-dark)' }}>{filtered.length}</strong>{' '}
+            produit{filtered.length > 1 ? 's' : ''} trouvé{filtered.length > 1 ? 's' : ''}
           </div>
 
           {filtered.length > 0 ? (

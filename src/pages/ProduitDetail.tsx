@@ -197,7 +197,7 @@ export default function ProduitDetail() {
                   { icon: '✅', text: 'Produit authentique 100%' },
                   { icon: '🚀', text: 'Livraison rapide Dakar' },
                   { icon: '🔒', text: 'Paiement sécurisé' },
-                  { icon: '↩️', text: 'Retour sous 48h' },
+                  { icon: '💬', text: 'Service client à votre écoute' },
                 ].map(g => (
                   <div key={g.text} style={{
                     display: 'flex', alignItems: 'center', gap: '8px',
